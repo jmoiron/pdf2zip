@@ -6,7 +6,8 @@
 from setuptools import setup, find_packages
 import sys, os
 
-version = '0.1'
+from pdf2zip import VERSION
+version = '.'.join(map(str, VERSION))
 
 # some trove classifiers:
 
@@ -21,7 +22,11 @@ setup(
     long_description=open('README.rst').read(),
     # Get strings from http://pypi.python.org/pypi?%3Aaction=list_classifiers
     classifiers=[
-        'Development Status :: 1 - Planning',
+        'Development Status :: 5 - Production/Stable',
+        'Environment :: Console',
+        'Intended Audience :: End Users/Desktop',
+        'License :: OSI Approved :: MIT License',
+        'Operating System :: POSIX',
     ],
     keywords='pdf to jpeg conversion',
     author='Jason Moiron',
