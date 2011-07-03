@@ -1,0 +1,15 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+"""pdf2zip command line utility"""
+
+import sys
+import pdf2zip
+
+if __name__ == '__main__':
+    try:
+        sys.exit(pdf2zip.main())
+    except KeyboardInterrupt:
+        pass
+    sys.exit(-1)
+
