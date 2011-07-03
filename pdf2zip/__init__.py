@@ -110,6 +110,7 @@ def convert_images(filename, opts):
         q.get()
         count += 1
         write("\rConverting %d of %d " % (count, total))
+    write("Converting %d of %d\n" % (total, total))
 
     for image in images:
         full = os.path.join(dest, image)
