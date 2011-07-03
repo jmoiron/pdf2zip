@@ -153,7 +153,7 @@ def main():
 
 def parse_args():
     parser = optparse.OptionParser(version='.'.join(map(str, VERSION)),
-        usage="./%prog options")
+        usage="./%prog [options] file.pdf")
     parser.add_option('', '--skip', help="comma separated pages to skip (0 is first)")
     parser.add_option('', '--skip-file', help="supply a file with a number per line of pages to skip")
     parser.add_option('', '--scale', help="scale pages to certain size (ex. 50%)")
