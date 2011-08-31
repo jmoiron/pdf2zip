@@ -143,6 +143,8 @@ def main():
         skip = skipfile(opts.skip_file)
     if opts.skip:
         skip = map(int, opts.skip.split(','))
+    if opts.one_indexed:
+        skip = [i-1 for i in skip]
     to_images(filename)
     if skip:
         strip_images(filename, skip)
@@ -156,6 +158,8 @@ def parse_args():
         usage="./%prog [options] file.pdf")
     parser.add_option('', '--skip', help="comma separated pages to skip (0 is first)")
     parser.add_option('', '--skip-file', help="supply a file with a number per line of pages to skip")
+    parser.add_option('-1', '--one-indexed', action='store_true',
+            help="skip file starts with first page of 1 rather than 0")
     parser.add_option('', '--scale', help="scale pages to certain size (ex. 50%)")
     parser.add_option('-d', '--dimensions', help="resize images to fit within box")
     parser.add_option('-q', '--quality', default=90, help="quality of jpeg compression (default 90)")
