@@ -8,7 +8,9 @@ resulting images, options to scale or resize the images to a bounding box,
 and the ability to specify pages in the PDF to skip.
 
 This was primarily developed for personal use, but is made available in the
-hopes that it might be useful for someone.
+hopes that it might be useful for someone.  This project is relatively
+complete and will only be updated for compatability (new OSes or versions
+of its dependencies) or device support (new tablets).
 
 To install, just::
 
